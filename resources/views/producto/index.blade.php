@@ -3,8 +3,9 @@
 <div class="row">
     <div class="col-md-8 col-xs-12">
     @include('producto.search')
+    <h3>Reporte Todos Los productos    <a href="\imprimirproductos"><button class="btn btn-success"><span class="glyphicon glyphicon-download-alt"></span>    Generar PDF</button></a></h3>
     </div>
-    <h3>Reporte Todos Los productos  <a href="\imprimirproductos"><button class="btn btn-success"><span class="glyphicon glyphicon-download-alt"></span>  Generar PDF</button></a></h3>
+    
         <div class="col-md-2">
             <a href="producto/create" class="pull-right">
                 <button class="btn btn-success">Insertar Producto</button>
