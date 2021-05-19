@@ -3,7 +3,7 @@
 <div class="row">
     <div class="col-md-8 col-xs-12">
     @include('pedido.search')
-    
+    <h3>Reporte Todos Los pedidos    <a href="\imprimirpedidos"><button class="btn btn-success"><span class="glyphicon glyphicon-download-alt"></span>    Generar PDF</button></a></h3>
     </div>
     
         <div class="col-md-2">

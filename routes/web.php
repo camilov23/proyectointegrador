@@ -16,6 +16,7 @@ Route::resource('detalle_pedido', 'detalle_pedidoController');
 Route::resource('pedido', 'pedidosController');
 Route::resource('producto', 'ProductoController');
 Route::get('imprimirproductos','PdfController@imprimirproductos')->name('imprimirproductos');
+Route::get('imprimirpedidos','pedidoPdfController@imprimirpedidos')->name('imprimirpedidos');
 Route::get('/', function () {
     return view('welcome');
 });
