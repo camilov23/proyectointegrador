@@ -69,6 +69,8 @@ desired effect
 
     <!-- Header Navbar -->
     <nav class="navbar navbar-static-top" role="navigation">
+    
+   
       <!-- Sidebar toggle button-->
       <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
         <span class="sr-only">Toggle navigation</span>
@@ -259,8 +261,8 @@ desired effect
       <ul class="sidebar-menu" data-widget="tree">
         <li class="header">HEADER</li>
         <!-- Optionally, you can add icons to the links -->
-        <li class="active"><a href="#"><i class="fa fa-link"></i> <span>Link</span></a></li>
-        <li><a href="#"><i class="fa fa-link"></i> <span>Another Link</span></a></li>
+        <li class="active"><a href="producto"><i class="fa fa-link"></i> <span>PRODUCTOS</span></a></li>
+        <li><a href="pedido"><i class="fa fa-link"></i> <span>PEDIDOS</span></a></li>
         <li class="treeview">
           <a href="#"><i class="fa fa-link"></i> <span>Multilevel</span>
             <span class="pull-right-container">
@@ -284,7 +286,7 @@ desired effect
     <section class="content-header">
       <h1>
       <b>GENOMA VEHICULOS</b>
-        <small>los mejores en reparacion</small>
+        <small><b>los mejores en reparacion</b></small>
       </h1>
       <ol class="breadcrumb">
         <li><a href="#"><i class="fa fa-dashboard"></i> Level</a></li>
@@ -313,7 +315,7 @@ desired effect
       Anything you want
     </div>
     <!-- Default to the left -->
-    <strong>Copyright &copy; 2016 <a href="#">Company</a>.</strong> All rights reserved.
+    <strong>Copyright &copy; 2021 <a href="#">GENOMA VEHICULOS</a>.</strong> All rights reserved.
   </footer>
 
   <!-- Control Sidebar -->
