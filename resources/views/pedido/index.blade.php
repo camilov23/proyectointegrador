@@ -24,8 +24,8 @@
                                         <th>Subtotal</th>
                                         <th>Iva</th>
                                         <th>Total</th>
-                                        <th>id_metodo_pago</th>
-
+                                        <th>Metodo de Pago</th>
+ 
                                         <th width="180">Opciones</th>
                                     </thead>
                                     <tbody>

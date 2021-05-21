@@ -50,7 +50,15 @@
     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
         <div class="form-group"><br>
             <label for="id_metodo_pago">Metodo de pago</label>
-            <input type="number" name="id_metodo_pago" id="id_metodo_pago" class="form-control" placeholder="codigo" >
+            <select name="id_metodo_pago"  id="id_metodo_pago" class="form-control" >
+
+                <option>Efectivo</option>
+                
+                <option>Tarjeta</option>
+                
+                <option>Cheque</option>
+                
+                </select>
         </div>
     </div>
 

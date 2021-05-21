@@ -18,7 +18,7 @@
 <div class="row">
     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
         <div class="form-group"><br>
-            <label for="marca">Nombre</label>
+            <label for="nombre">Nombre</label>
             <input type="text" name="nombre" id="nombre" class="form-control" placeholder="Nombre" value="{{$producto->nombre}}">
         </div>
     </div>
@@ -26,6 +26,12 @@
         <div class="form-group"><br>
             <label for="marca">Marca</label>
             <input type="text" name="marca" id="marca" class="form-control" placeholder="Marca" value="{{$producto->marca}}">
+        </div>
+    </div>
+    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+        <div class="form-group"><br>
+            <label for="cantidad">Cantidad</label>
+            <input type="number" name="cantidad" id="cantidad" class="form-control" placeholder="Cantidad" value="{{$producto->cantidad}}">
         </div>
     </div>
     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
@@ -43,9 +49,9 @@
     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
         <div class="form-group"><br>
             <button class="btn btn-primary"type="submit">
-                <span class="glyphicon glyphicon-refresh"></span>Actualizar </button>
+                <span class="glyphicon glyphicon-refresh"></span>  Actualizar </button>
                     <a class="btn btn-info"type="reset" href="{{url('producto')}}">
-                        <spa nclass="glyphicon glyphicon-home"></span>Regresar </a>
+                        <span class="glyphicon glyphicon-home"></span>  Regresar </a>
 </div>
 </div>
 </div>

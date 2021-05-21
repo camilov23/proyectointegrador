@@ -51,7 +51,16 @@
         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
         <div class="form-group"><br>
             <label for="id_metodo_pago">Metodo de pago</label>
-            <input type="number" name="id_metodo_pago" id="id_metodo_pago" class="form-control" placeholder="codigo"  value="{{$pedidos->id_metodo_pago}}">
+           
+            <select name="id_metodo_pago"  id="id_metodo_pago" class="form-control" value="{{$pedidos->id_metodo_pago}}" >
+
+                <option>Efectivo</option>
+                
+                <option>Tarjeta</option>
+                
+                <option>Cheque</option>
+                
+                </select>
         </div>
     </div>
 
@@ -60,7 +69,7 @@
             <button class="btn btn-primary"type="submit">
                 <span class="glyphicon glyphicon-refresh"></span> Actualizar </button>
                     <a class="btn btn-info"type="reset" href="{{url('producto')}}">
-                        <spa nclass="glyphicon glyphicon-home"></span>Regresar </a>
+                        <span class="glyphicon glyphicon-home"></span>Regresar </a>
 </div>
 </div>
 </div>

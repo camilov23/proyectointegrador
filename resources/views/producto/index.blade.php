@@ -20,6 +20,7 @@
                                         <th>Id</th>  
                                         <th>Nombre</th>
                                         <th>Marca</th>
+                                        <th>cantidad</th>
                                         <th>Precio</th>
                                         <th>Nacional</th>
                                         <th width="180">Opciones</th>
@@ -30,6 +31,7 @@
                                             <td>{{ $producto->id }}</td>
                                             <td>{{ $producto->nombre }}</td>
                                             <td>{{ $producto->marca }}</td>
+                                            <td>{{ $producto->cantidad }}</td>
                                             <td>{{ $producto->precio }}</td>
                                             <td>{{ $producto->nacional }}</td>
                                             <td>

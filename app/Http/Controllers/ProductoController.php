@@ -40,6 +40,7 @@ class ProductoController extends Controller
         $productos=new producto;
         $productos->nombre=$request->get('nombre');
         $productos->marca=$request->get('marca');
+        $productos->Cantidad=$request->get('cantidad');
         $productos->precio=$request->get('precio');
         $productos->nacional=$request->get('nacional');
         $productos->save();
@@ -81,6 +82,7 @@ class ProductoController extends Controller
         $productos=producto::findOrFail($id);
         $productos->nombre=$request->get('nombre');
         $productos->marca=$request->get('marca');
+        $productos->cantidad=$request->get('cantidad');
         $productos->precio=$request->get('precio');
         $productos->nacional=$request->get('nacional');
         $productos->update();

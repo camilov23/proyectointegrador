@@ -18,11 +18,15 @@
             <tr>
                 <th>NOMBRE</th>
                 <th>MARCA</th>
+                <th>CANTIDAD</th>
                 <th>PRECIO</th>
+                <th>NACIONAL</th>
             </tr>@foreach($producto as $pro)<tr>
                 <td>ID: {{$pro->nombre}}</td>
                 <td>{{$pro->marca}}</td>
+                <td>{{$pro->Cantidad}}</td>
                 <td>{{$pro->precio}}</td>
+                <td>{{$pro->nacional}}</td>
             </tr>@endforeach
         </table>
         <h5 class="text-center">Grupo 511 -Tecnología en Sistemas</h5>

@@ -31,6 +31,12 @@
     </div>
     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
         <div class="form-group"><br>
+            <label for="cantidad">Cantidad</label>
+            <input type="number" name="cantidad" id="cantidad" class="form-control" placeholder="Cantidad">
+        </div>
+    </div>
+    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+        <div class="form-group"><br>
             <label for="precio">Precio</label>
             <input type="number" name="precio" id="precio" class="form-control" placeholder="Precio">
         </div>
@@ -38,15 +44,16 @@
     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
         <div class="form-group"><br>
             <label for="nacional">Nacional</label>
-            <input type="text" name="nacional" id="nacional" class="form-control" placeholder="nacional">
+            <input type="text" name="nacional" id="nacional" class="form-control" placeholder="Nacional">
         </div>
     </div>
+
     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
         <div class="form-group"><br>
             <button class="btn btn-primary"type="submit">
-                <span class="glyphicon glyphicon-ok"></span>Guardar</button>
+                <span class="glyphicon glyphicon-ok"></span>  Guardar</button>
                     <button class="btn btn-danger"type="reset">
-                        <span class="glyphicon glyphicon-remove"></span>Vaciar Campos</button>
+                        <span class="glyphicon glyphicon-remove"></span> Vaciar Campos</button>
                             <a class="btn btn-info"type="reset" href="{{url('producto')}}">
                                 <span class="glyphicon glyphicon-home"></span>Regresar</a>
 </div>
