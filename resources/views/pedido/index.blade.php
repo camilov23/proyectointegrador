@@ -21,6 +21,7 @@
                                         <th>Id_Empleado</th>
                                         <th>Id_Cliente</th>
                                         <th>Fecha</th>
+                                        <th>Hora</th>
                                         <th>Subtotal</th>
                                         <th>Iva</th>
                                         <th>Total</th>
@@ -35,6 +36,7 @@
                                             <td>{{ $pedido->id_empleado}}</td>
                                             <td>{{ $pedido->id_cliente }}</td>
                                             <td>{{ $pedido->fecha}}</td>
+                                            <td>{{ $pedido->hora}}</td>
                                             <td>{{ $pedido->subtotal }}</td>
                                             <td>{{ $pedido->iva}}</td>
                                             <td>{{ $pedido->total }}</td>

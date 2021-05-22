@@ -20,15 +20,17 @@
                 <th>ID_EMPLEADO</th>
                 <th>ID_CLIENTE</th>
                 <th>FECHA</th>
+                <th>HORA</th>
                 <th>SUBTOTAL</th>
                 <th>IVA</th>
                 <th>TOTAL</th>
                 <th>METODO DE PAGO</th>
             </tr>@foreach($pedidos as $ped)<tr>
-                <td>ID: {{$ped->id}}</td>
+                <td>{{$ped->id}}</td>
                 <td>{{$ped->id_empleado}}</td>
                 <td>{{$ped->id_cliente}}</td>
                 <td>{{$ped->fecha}}</td>
+                <td>{{$ped->hora}}
                 <td>{{$ped->subtotal}}</td>
                 <td>{{$ped->iva}}</td>
                 <td>{{$ped->total}}</td>

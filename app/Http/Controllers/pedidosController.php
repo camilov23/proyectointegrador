@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\detalle_pedido;
 use App\pedidos;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
@@ -15,6 +15,7 @@ class pedidosController extends Controller
      */
     public function index()
     {
+        
         $pedidos = pedidos::orderBy('id', 'DESC')->paginate(7);
         return view('pedido.index', compact('pedidos'));
     }
@@ -70,6 +71,7 @@ class pedidosController extends Controller
         $pedidos=pedidos::findOrFail($id);
         return view("pedido.edit",["pedidos"=>$pedidos]);
     }
+  
 
     /**
      * Update the specified resource in storage.

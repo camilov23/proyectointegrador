@@ -16,15 +16,17 @@
         <h3 class="text-center">Tel. 09989</h3><br> <br> <br>
         <table class="table table-bordered table-striped table-hover">
             <tr>
+                <th>ID</th>
                 <th>NOMBRE</th>
                 <th>MARCA</th>
                 <th>CANTIDAD</th>
                 <th>PRECIO</th>
                 <th>NACIONAL</th>
             </tr>@foreach($producto as $pro)<tr>
-                <td>ID: {{$pro->nombre}}</td>
+                <td>{{$pro->id}}</td>
+                <td>{{$pro->nombre}}</td>
                 <td>{{$pro->marca}}</td>
-                <td>{{$pro->Cantidad}}</td>
+                <td>{{$pro->cantidad}}</td>
                 <td>{{$pro->precio}}</td>
                 <td>{{$pro->nacional}}</td>
             </tr>@endforeach
