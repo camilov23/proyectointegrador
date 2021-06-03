@@ -15,12 +15,15 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <link rel="stylesheet" href="{{asset('bower_components/font-awesome/css/font-awesome.min.css')}}">
   <!-- Ionicons -->
   <link rel="stylesheet" href="{{asset('bower_components/Ionicons/css/ionicons.min.css')}}">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <!-- Theme style -->
   <link rel="stylesheet" href="{{asset('dist/css/AdminLTE.min.css')}}">
   <!-- AdminLTE Skins. We have chosen the skin-blue for this starter
         page. However, you can choose any other skin. Make sure you
         apply the skin class to the body tag so the changes take effect. -->
   <link rel="stylesheet" href="{{asset('dist/css/skins/skin-blue.min.css')}}">
+  <link rel="icon" href="{{asset('dist/img/mechanic.ico')}}">
+  
 
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -64,7 +67,7 @@ desired effect
       <!-- mini logo for sidebar mini 50x50 pixels -->
       <span class="logo-mini"><b>A</b>LT</span>
       <!-- logo for regular state and mobile devices -->
-      <span class="logo-lg"><b>GENOMA</b>VEHICULOS</span>
+      <span class="logo-lg"><b>MECHACNIC</b>GARAGE</span>
     </a>
 
     <!-- Header Navbar -->
@@ -179,17 +182,17 @@ desired effect
             <!-- Menu Toggle Button -->
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
               <!-- The user image in the navbar-->
-              <img src="dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
+              <img src="dist/img/garage.jpeg" class="user-image" alt="User Image">
               <!-- hidden-xs hides the username on small devices so only the image appears. -->
-              <span class="hidden-xs">Alexander Pierce</span>
+              <span class="hidden-xs">ADMIN</span>
             </a>
             <ul class="dropdown-menu">
               <!-- The user image in the menu -->
               <li class="user-header">
-                <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+                <img src="dist/img/garage.jpeg" class="img-circle" alt="User Image">
 
                 <p>
-                  Alexander Pierce - Web Developer
+                 CAMILO VALENCIA - ADMIN
                   <small>Member since Nov. 2012</small>
                 </p>
               </li>
@@ -236,33 +239,24 @@ desired effect
       <!-- Sidebar user panel (optional) -->
       <div class="user-panel">
         <div class="pull-left image">
-          <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+          <img src="dist/img/garage.jpeg" class="img-circle" alt="User Image">
         </div>
         <div class="pull-left info">
-          <p>Alexander Pierce</p>
+          <p>MECHACNIC GARAGE</p>
           <!-- Status -->
           <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
         </div>
       </div>
 
-      <!-- search form (Optional) -->
-      <form action="#" method="get" class="sidebar-form">
-        <div class="input-group">
-          <input type="text" name="q" class="form-control" placeholder="Search...">
-          <span class="input-group-btn">
-              <button type="submit" name="search" id="search-btn" class="btn btn-flat"><i class="fa fa-search"></i>
-              </button>
-            </span>
-        </div>
-      </form>
-      <!-- /.search form -->
+    
 
       <!-- Sidebar Menu -->
       <ul class="sidebar-menu" data-widget="tree">
-        <li class="header">HEADER</li>
+        <li class="header"><b>MENU</b></li>
         <!-- Optionally, you can add icons to the links -->
-        <li class="active"><a href="producto"><i class="fa fa-link"></i> <span>PRODUCTOS</span></a></li>
+        <li><a href="producto"><i class="fa fa-link"></i> <span>PRODUCTOS</span></a></li>
         <li><a href="pedido"><i class="fa fa-link"></i> <span>PEDIDOS</span></a></li>
+        <li><a href="detalle"><i class="fa fa-link"></i> <span>DETALLE</span></a></li>
         <li class="treeview">
           <a href="#"><i class="fa fa-link"></i> <span>Multilevel</span>
             <span class="pull-right-container">
@@ -285,7 +279,7 @@ desired effect
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-      <b>GENOMA VEHICULOS</b>
+      <b>MECHACNIC SERVICE GARAGE</b>
         <small><b>los mejores en reparacion</b></small>
       </h1>
       <ol class="breadcrumb">
@@ -315,7 +309,7 @@ desired effect
       Anything you want
     </div>
     <!-- Default to the left -->
-    <strong>Copyright &copy; 2021 <a href="#">GENOMA VEHICULOS</a>.</strong> All rights reserved.
+    <strong>Copyright &copy; 2021 <a href="#">MECHACNIC SERVICE GARAGE</a>.</strong> All rights reserved.
   </footer>
 
   <!-- Control Sidebar -->

@@ -1,4 +1,4 @@
-<form action=""method="GET">
+<form action="" method="GET">
     <div class="form-group">
         <div class="input-group">
             <input type="text" name="searchText" class="form-control" placeholder="Buscar..." value="  ">

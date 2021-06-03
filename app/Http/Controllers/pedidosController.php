@@ -5,6 +5,8 @@ use App\detalle_pedido;
 use App\pedidos;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
+use DB;
+
 
 class pedidosController extends Controller
 {
@@ -18,6 +20,14 @@ class pedidosController extends Controller
         
         $pedidos = pedidos::orderBy('id', 'DESC')->paginate(7);
         return view('pedido.index', compact('pedidos'));
+
+        $detalle_pedido = DB::table('detalle_pedido as deta')
+        ->join('pedidos as p', 'p.id', '=', 'pedidos.id')
+        ->where('p.id', '=', Auth::id())
+        ->get();
+        return view('index')->with('detalle_pedido',$detalle_pedido);
+        return view('index');
+
     }
 
     /**

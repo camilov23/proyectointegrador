@@ -20,7 +20,7 @@
                                         <th>Id</th>  
                                         <th>Nombre</th>
                                         <th>Marca</th>
-                                        <th>cantidad</th>
+                                        <th>Stock</th>
                                         <th>Precio</th>
                                         <th>Nacional</th>
                                         <th width="180">Opciones</th>

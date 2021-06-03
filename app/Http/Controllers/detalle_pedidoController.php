@@ -1,9 +1,9 @@
 <?php
 
 namespace App\Http\Controllers;
-use app\detalle_pedido;
+use App\detalle_pedido;
 use Illuminate\Http\Request;
-
+use Illuminate\Support\Facades\Redirect;
 class detalle_pedidoController extends Controller
 {
     /**
@@ -13,8 +13,8 @@ class detalle_pedidoController extends Controller
      */
     public function index()
     {
-        $detalle_pedido= detalle_pedido::orderBy('id_factura', 'DESC')->paginate(3);
-        return view('detalle_pedido.index', compact('detalle_pedido'));
+        $detalle_pedido= detalle_pedido::orderBy('id_pedido', 'DESC')->paginate(3);
+        return view('detalle.index', compact('detalle_pedido'));
     }
 
     /**
@@ -24,7 +24,7 @@ class detalle_pedidoController extends Controller
      */
     public function create()
     {
-        //
+        return view('detalle.create');
     }
 
     /**
@@ -35,7 +35,12 @@ class detalle_pedidoController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $detalle_pedido= new detalle_pedido;
+        $detalle_pedido->id_pedido= $request->get('id_pedido');
+        $detalle_pedido->id_producto = $request->get('id_producto');
+        $detalle_pedido->cantidad= $request->get('cantidad');
+        $detalle_pedido->save();
+        return Redirect::to('detalle');
     }
 
     /**

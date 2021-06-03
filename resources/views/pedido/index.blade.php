@@ -2,6 +2,8 @@
 @section('contenido')
 <div class="row">
     <div class="col-md-8 col-xs-12">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
     @include('pedido.search')
     <h3>Reporte Todos Los pedidos    <a href="\imprimirpedidos"><button class="btn btn-success"><span class="glyphicon glyphicon-download-alt"></span>    Generar PDF</button></a></h3>
     </div>
@@ -47,6 +49,13 @@
 
                                                     <a href=""data-target="#modal-delete-{{$pedido->id}}" data-toggle="modal">
                                                     <button class="btn btn-danger">Eliminar</button></a>
+
+                                                   
+                                                    <button type="button" class="btn btn-warning">
+                                                    <span class="material-icons-outlined">
+                                                        description
+                                                        </span></button>
+                                                    
                                             </td>
                                         </tr>
                                         @include('pedido.modal')

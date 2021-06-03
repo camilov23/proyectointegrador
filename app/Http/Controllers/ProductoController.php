@@ -5,7 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\producto;
 use Illuminate\Support\Facades\Redirect;
-
+use DB;
+use App\detalle_pedido;
 class ProductoController extends Controller
 {
     /**
@@ -15,8 +16,11 @@ class ProductoController extends Controller
      */
     public function index()
     {
-        $productos=Producto::orderBy('id','DESC')->paginate(3);
+        $productos=Producto::orderBy('id','DESC')->paginate(7);
         return view('producto.index',compact('productos'));   
+
+       
+
     }
 
     /**
