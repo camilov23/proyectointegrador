@@ -20,13 +20,13 @@
     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
         <div class="form-group">
         <br><label for="id_pedido">Pedido</label>
-            <input type="text" name="id_pedido" id="id_pedido" class="form-control" placeholder="pedido">
+            <input type="text" name="pedido_factura_id_pedido_fact" id="pedido_factura_id_pedido_fact" class="form-control" placeholder="pedido">
         </div>
     </div>
     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
         <div class="form-group"><br>
             <label for="id_producto">Producto</label>
-            <input type="text" name="id_producto" id="id_producto" class="form-control" placeholder="Marca">
+            <input type="text" name="producto_id_producto" id="producto_id_producto" class="form-control" placeholder="producto">
         </div>
     </div>
     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">

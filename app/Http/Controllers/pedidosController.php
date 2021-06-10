@@ -18,16 +18,16 @@ class pedidosController extends Controller
     public function index()
     {
         
-        $pedidos = pedidos::orderBy('id', 'DESC')->paginate(7);
+        $pedidos = pedidos::orderBy('id_pedido_fact', 'DESC')->paginate(7);
         return view('pedido.index', compact('pedidos'));
 
-        $detalle_pedido = DB::table('detalle_pedido as deta')
-        ->join('pedidos as p', 'p.id', '=', 'pedidos.id')
-        ->where('p.id', '=', Auth::id())
-        ->get();
-        return view('index')->with('detalle_pedido',$detalle_pedido);
-        return view('index');
-
+        $pedidos = DB::table('pedido_factura as pf')
+        ->join('pedido_detalle as pd','pd.pedido_factura_id_pedido_fact', '=', 'pf.id_pedido_fact')
+        ->join('cliente as cl','pf.cliente_id_cliente','=', 'cl.id_cliente')
+        ->join('empleado as em','pf.empleado_id_empleado', '=', 'em.id_empleado')
+        ->join('producto as pr','pd.producto_id_producto', '=', 'pr.id_producto')
+         ->get();
+         
     }
 
     /**
@@ -49,12 +49,12 @@ class pedidosController extends Controller
     public function store(Request $request)
     {
         $pedidos = new pedidos;
-        $pedidos->id_empleado = $request->get('id_empleado');
-        $pedidos->id_cliente = $request->get('id_cliente');
+        $pedidos->empleado_id_empleado = $request->get('empleado_id_empleado');
+        $pedidos->cliente_id_cliente = $request->get('cliente_id_cliente');
         $pedidos->subtotal = $request->get('subtotal');
         $pedidos->iva = $request->get('iva');
-        $pedidos->total = $request->get('total');
-        $pedidos->id_metodo_pago = $request->get('id_metodo_pago');
+        $pedidos->valor_total = $request->get('valor_total');
+        $pedidos->metodo_pago = $request->get('metodo_pago');
         $pedidos->save();
         return Redirect::to('pedido');
     }
@@ -65,7 +65,7 @@ class pedidosController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show($id_pedido_fact)
     {
         //
     }
@@ -76,9 +76,9 @@ class pedidosController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit($id_pedido_fact)
     {
-        $pedidos=pedidos::findOrFail($id);
+        $pedidos=pedidos::findOrFail($id_pedido_fact);
         return view("pedido.edit",["pedidos"=>$pedidos]);
     }
   
@@ -90,15 +90,15 @@ class pedidosController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, $id_pedido_fact)
     {
-        $pedidos=pedidos::findOrFail($id);
-        $pedidos->id_empleado = $request->get('id_empleado');
-        $pedidos->id_cliente = $request->get('id_cliente');
+        $pedidos=pedidos::findOrFail($id_pedido_fact);
+        $pedidos->empleado_id_empleado = $request->get('empleado_id_empleado');
+        $pedidos->cliente_id_cliente = $request->get('cliente_id_cliente');
         $pedidos->subtotal = $request->get('subtotal');
         $pedidos->iva = $request->get('iva');
-        $pedidos->total = $request->get('total');
-        $pedidos->id_metodo_pago = $request->get('id_metodo_pago');
+        $pedidos->valor_total = $request->get('valor_total');
+        $pedidos->metodo_pago = $request->get('metodo_pago');
         $pedidos->update();
         return Redirect::to('pedido');
     }
@@ -109,9 +109,9 @@ class pedidosController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy($id_pedido_fact)
     {
-        $pedidos = pedidos::findOrFail($id);
+        $pedidos = pedidos::findOrFail($id_pedido_fact);
         $pedidos->delete();
         return Redirect::to('pedido');
     }

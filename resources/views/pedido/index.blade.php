@@ -1,16 +1,15 @@
 @extends('layouts.plantilla')
 @section('contenido')
+
 <div class="row">
     <div class="col-md-8 col-xs-12">
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet">
     @include('pedido.search')
-    <h3>Reporte Todos Los pedidos    <a href="\imprimirpedidos"><button class="btn btn-success"><span class="glyphicon glyphicon-download-alt"></span>    Generar PDF</button></a></h3>
+    <h3>Reporte Todos Los pedidos    <a href="\imprimirpedidos"><button class="btn btn-success"><span class="glyphicon glyphicon-download-alt"></span></button></a></h3>
     </div>
     
         <div class="col-md-2">
             <a href="pedido/create" class="pull-right">
-                <button class="btn btn-success">Insertar pedido</button>
+                <button class="btn btn-success"><img src="dist/img/add2.png" ></button>
                 </a>
                 </div>
                     </div>
@@ -20,8 +19,8 @@
                                 <table class="table table-striped table-hover">
                                     <thead>
                                         <th>ID</th>  
-                                        <th>Id_Empleado</th>
-                                        <th>Id_Cliente</th>
+                                        <th>Empleado</th>
+                                        <th>Cliente</th>
                                         <th>Fecha</th>
                                         <th>Hora</th>
                                         <th>Subtotal</th>
@@ -34,30 +33,28 @@
                                     <tbody>
                                     @foreach($pedidos as $pedido)
                                     <tr>
-                                            <td>{{ $pedido->id }}</td>
-                                            <td>{{ $pedido->id_empleado}}</td>
-                                            <td>{{ $pedido->id_cliente }}</td>
-                                            <td>{{ $pedido->fecha}}</td>
+                                            <td>{{ $pedido->id_pedido_fact }}</td>
+                                            <td>{{ $pedido->empleado_id_empleado}}</td>
+                                            <td>{{ $pedido->cliente_id_cliente }}</td>
+                                            <td>{{ $pedido->fecha_pedido}}</td>
                                             <td>{{ $pedido->hora}}</td>
                                             <td>{{ $pedido->subtotal }}</td>
-                                            <td>{{ $pedido->iva}}</td>
-                                            <td>{{ $pedido->total }}</td>
-                                            <td>{{ $pedido->id_metodo_pago }}</td>
+                                            <td>{{ $pedido->iva }}</td>
+                                            <td>{{ $pedido->valor_total }}</td>
+                                            <td>{{ $pedido->metodo_pago }}</td>
                                             <td>
-                                            <a href="{{URL::action('pedidosController@edit',$pedido->id)}}">
-                                            <button class="btn btn-primary">Actualizar</button></a>
+                                          
+                                            <a href="{{URL::action('pedidosController@edit',$pedido->id_pedido_fact)}}">
+                                            <button class="btn btn-primary"><img src="dist/img/update2.png" ></button></a>
 
-                                                    <a href=""data-target="#modal-delete-{{$pedido->id}}" data-toggle="modal">
-                                                    <button class="btn btn-danger">Eliminar</button></a>
+                                            <a href="{{URL::action('facturaPdfController@imprimirpagos',$pedido->id_pedido_fact)}}">
+                                            <button class="btn btn-warning"><img src="dist/img/pay2.png" ></button>
 
-                                                   
-                                                    <button type="button" class="btn btn-warning">
-                                                    <span class="material-icons-outlined">
-                                                        description
-                                                        </span></button>
-                                                    
+                                                    <a href="" data-target="#modal-delete-{{$pedido->id_pedido_fact}}" data-toggle="modal">
+                                                    <button class="btn btn-danger"><img src="dist/img/delete2.png" ></button></a>  
                                             </td>
                                         </tr>
+                                      
                                         @include('pedido.modal')
                                         @endforeach
                                         </tbody>
@@ -68,3 +65,5 @@
                                     </div>
 
                                     @endsection
+                                    
+                        

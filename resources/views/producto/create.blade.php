@@ -19,6 +19,12 @@
 <div class="row">
     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
         <div class="form-group">
+            <br><label for="garantia_id_garantia">garantia</label>
+                <input type="text" name="garantia_id_garantia" id="garantia_id_garantia" class="form-control" placeholder="garantia">
+            </div>
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+        <div class="form-group">
         <br><label for="marca">Nombre</label>
             <input type="text" name="nombre" id="nombre" class="form-control" placeholder="Nombre">
         </div>
@@ -37,17 +43,22 @@
     </div>
     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
         <div class="form-group"><br>
-            <label for="precio">Precio</label>
-            <input type="number" name="precio" id="precio" class="form-control" placeholder="Precio">
+            <label for="precio_unitario">Precio</label>
+            <input type="number" name="precio_unitario" id="precio_unitario" class="form-control" placeholder="Precio">
         </div>
     </div>
     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
         <div class="form-group"><br>
             <label for="nacional">Nacional</label>
-            <input type="text" name="nacional" id="nacional" class="form-control" placeholder="Nacional">
+            <select name="nacional"  id="nacional" class="form-control" >
+
+                <option>si</option>
+                
+                <option>no</option>
+                
+                </select>
         </div>
     </div>
-
     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
         <div class="form-group"><br>
             <button class="btn btn-primary"type="submit">

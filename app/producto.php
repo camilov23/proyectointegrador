@@ -6,12 +6,20 @@ use Illuminate\Database\Eloquent\Model;
 
 class producto extends Model
 {
+    protected $table = 'producto';
+    protected $primary_key = 'id_producto';
+    protected $foreign_key_constraints = 'garantia_id_garantia';
     public $timestamps = false;
-    protected $fillable = ['id','nombre','marca','cantidad','precio','nacional'];
-    
-    public function detalle_pedido(){
-        
-        return $this->hasMany('App\detalle_pedido');
+    protected $fillable = ['garantia_id_garantia','id_producto','nombre','precio_unitario','cantidad','marca','nacional'];
+  
+    public function pedido_detalle(){
+
+        return $this->belongsTo('App\detalle_pedido');
+    }
     
     }
-}
+
+
+
+
+

@@ -16,12 +16,18 @@ class ProductoController extends Controller
      */
     public function index()
     {
-        $productos=Producto::orderBy('id','DESC')->paginate(7);
+        $productos=Producto::orderBy('id_producto','DESC')->paginate(7);
         return view('producto.index',compact('productos'));   
 
-       
+        $productos= DB::table('pedido_factura as pf')
+        ->join('pedido_detalle as pd','pd.pedido_factura_id_pedido_fact', '=', 'pf.id_pedido_fact')
+        ->join('cliente as cl','pf.cliente_id_cliente','=', 'cl.id_cliente')
+        ->join('empleado as em','pf.empleado_id_empleado', '=', 'em.id_empleado')
+        ->join('producto as pr','pd.producto_id_producto', '=', 'pr.id_producto')
+        ->get();
 
-    }
+
+     }
 
     /**
      * Show the form for creating a new resource.
@@ -42,10 +48,11 @@ class ProductoController extends Controller
     public function store(Request $request)
     {
         $productos=new producto;
+        $productos->garantia_id_garantia=$request->get('garantia_id_garantia');
         $productos->nombre=$request->get('nombre');
         $productos->marca=$request->get('marca');
         $productos->Cantidad=$request->get('cantidad');
-        $productos->precio=$request->get('precio');
+        $productos->precio_unitario=$request->get('precio_unitario');
         $productos->nacional=$request->get('nacional');
         $productos->save();
         return Redirect::to('producto');
@@ -57,7 +64,7 @@ class ProductoController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show($id_producto)
     {
         //
     }
@@ -68,9 +75,9 @@ class ProductoController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit($id_producto)
     {
-        $productos=producto::findOrFail($id);
+        $productos=producto::findOrFail($id_producto);
         return view("producto.edit",["producto"=>$productos]);
     }
 
@@ -81,13 +88,14 @@ class ProductoController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, $id_producto)
     {
-        $productos=producto::findOrFail($id);
+        $productos=producto::findOrFail($id_producto);
+        $productos->garantia_id_garantia=$request->get('garantia_id_garantia');
         $productos->nombre=$request->get('nombre');
         $productos->marca=$request->get('marca');
-        $productos->cantidad=$request->get('cantidad');
-        $productos->precio=$request->get('precio');
+        $productos->Cantidad=$request->get('cantidad');
+        $productos->precio_unitario=$request->get('precio_unitario');
         $productos->nacional=$request->get('nacional');
         $productos->update();
         return Redirect::to('producto');   
@@ -99,9 +107,9 @@ class ProductoController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy($id_producto)
     {
-        $productos=producto::findOrFail($id);
+        $productos=producto::findOrFail($id_producto);
         $productos->delete();
         return Redirect::to('producto');
     }

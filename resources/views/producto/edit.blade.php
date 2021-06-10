@@ -14,8 +14,14 @@
         @endif
     </div>
 </div>
-{{Form::open(array('action'=>array('ProductoController@update', $producto->id),'method'=>'patch'))}}
+{{Form::open(array('action'=>array('ProductoController@update', $producto->id_producto),'method'=>'patch'))}}
 <div class="row">
+    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+        <div class="form-group"><br>
+            <label for="nombre">garantia</label>
+            <input type="text" name="garantia_id_garantia" id="garantia_id_garantia" class="form-control" placeholder="garantia" value="{{$producto->garantia_id_garantia}}">
+        </div>
+    </div>
     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
         <div class="form-group"><br>
             <label for="nombre">Nombre</label>
@@ -36,8 +42,8 @@
     </div>
     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
         <div class="form-group"><br>
-            <label for="precio">Precio</label>
-            <input type="number" name="precio" id="precio" class="form-control" placeholder="Precio" value="{{$producto->precio}}">
+            <label for="precio_unitario">precio</label>
+            <input type="number" name="precio_unitario" id="precio_unitario" class="form-control" placeholder="Precio" value="{{$producto->precio_unitario}}">
         </div>
     </div>
     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">

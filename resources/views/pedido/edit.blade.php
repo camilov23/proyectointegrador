@@ -14,20 +14,20 @@
         @endif
     </div>
 </div>
-{{Form::open(array('action'=>array('pedidosController@update', $pedidos->id),'method'=>'patch'))}}
+{{Form::open(array('action'=>array('pedidosController@update', $pedidos->id_pedido_fact),'method'=>'patch'))}}
 <div class="row">
 
 
 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
         <div class="form-group"><br>
             <label for="id_empleado">Empleado</label>
-            <input type="number" name="id_empleado" id="id_empleado" class="form-control" placeholder="codigo"  value="{{$pedidos->id_empleado}}">
+            <input type="number" name="id_empleado" id="id_empleado" class="form-control" placeholder="codigo"  value="{{$pedidos->empleado_id_empleado}}">
         </div>
 </div>
 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
         <div class="form-group"><br>
             <label for="id_cliente">Cliente</label>
-            <input type="number" name="id_cliente" id="id_cliente" class="form-control" placeholder="codigo"  value="{{$pedidos->id_cliente}}">
+            <input type="number" name="id_cliente" id="id_cliente" class="form-control" placeholder="codigo"  value="{{$pedidos->cliente_id_cliente}}">
         </div>
 </div>
     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
@@ -44,15 +44,15 @@
     </div>
     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
         <div class="form-group"><br>
-            <label for="total">Total</label>
-            <input type="number" name="total" id="total" class="form-control" placeholder="1700000" value="{{$pedidos->total}}">
+            <label for="valor_total">Total</label>
+            <input type="number" name="valor_total" id="valor_total" class="form-control" placeholder="1700000" value="{{$pedidos->valor_total}}">
         </div>
     </div>
         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
         <div class="form-group"><br>
             <label for="id_metodo_pago">Metodo de pago</label>
            
-            <select name="id_metodo_pago"  id="id_metodo_pago" class="form-control" value="{{$pedidos->id_metodo_pago}}" >
+            <select name="metodo_pago"  id="metodo_pago" class="form-control" value="{{$pedidos->metodo_pago}}" >
 
                 <option>Efectivo</option>
                 
@@ -68,7 +68,7 @@
         <div class="form-group"><br>
             <button class="btn btn-primary"type="submit">
                 <span class="glyphicon glyphicon-refresh"></span> Actualizar </button>
-                    <a class="btn btn-info"type="reset" href="{{url('producto')}}">
+                    <a class="btn btn-info"type="reset" href="{{url('pedido')}}">
                         <span class="glyphicon glyphicon-home"></span>Regresar </a>
 </div>
 </div>

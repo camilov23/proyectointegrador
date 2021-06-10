@@ -20,13 +20,13 @@
 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
         <div class="form-group"><br>
             <label for="id_empleado">Empleado</label>
-            <input type="number" name="id_empleado" id="id_empleado" class="form-control" placeholder="codigo">
+            <input type="number" name="empleado_id_empleado" id="id_empleado" class="form-control" placeholder="codigo">
         </div>
 </div>
 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
         <div class="form-group"><br>
             <label for="id_cliente">Cliente</label>
-            <input type="number" name="id_cliente" id="id_cliente" class="form-control" placeholder="codigo">
+            <input type="number" name="cliente_id_cliente" id="cliente_id_cliente" class="form-control" placeholder="codigo">
         </div>
 </div>
     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
@@ -43,14 +43,14 @@
     </div>
     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
         <div class="form-group"><br>
-            <label for="total">Total</label>
-            <input type="number" name="total" id="total" class="form-control" placeholder="1700000" >
+            <label for="valor_total">Total</label>
+            <input type="number" name="valor_total" id="valor_total" class="form-control" placeholder="1700000" >
         </div>
     </div>
     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
         <div class="form-group"><br>
-            <label for="id_metodo_pago">Metodo de pago</label>
-            <select name="id_metodo_pago"  id="id_metodo_pago" class="form-control" >
+            <label for="metodo_pago">Metodo de pago</label>
+            <select name="metodo_pago"  id="metodo_pago" class="form-control" >
 
                 <option>Efectivo</option>
                 

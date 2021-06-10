@@ -17,17 +17,19 @@
         <table class="table table-bordered table-striped table-hover">
             <tr>
                 <th>ID</th>
+                <th>GARANTIA</th>
                 <th>NOMBRE</th>
                 <th>MARCA</th>
                 <th>CANTIDAD</th>
                 <th>PRECIO</th>
                 <th>NACIONAL</th>
             </tr>@foreach($producto as $pro)<tr>
-                <td>{{$pro->id}}</td>
+                <td>{{$pro->id_producto}}</td>
+                <td>{{$pro->garantia_id_garantia}}</td>
                 <td>{{$pro->nombre}}</td>
                 <td>{{$pro->marca}}</td>
                 <td>{{$pro->cantidad}}</td>
-                <td>{{$pro->precio}}</td>
+                <td>{{$pro->precio_unitario}}</td>
                 <td>{{$pro->nacional}}</td>
             </tr>@endforeach
         </table>

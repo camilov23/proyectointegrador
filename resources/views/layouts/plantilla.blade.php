@@ -7,7 +7,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>GENOMAVEHICULOS | INICIO</title>
+  <title>GARAGE | INICIO</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <link rel="stylesheet" href="{{asset('bower_components/bootstrap/dist/css/bootstrap.min.css')}}">
@@ -15,7 +15,6 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <link rel="stylesheet" href="{{asset('bower_components/font-awesome/css/font-awesome.min.css')}}">
   <!-- Ionicons -->
   <link rel="stylesheet" href="{{asset('bower_components/Ionicons/css/ionicons.min.css')}}">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <!-- Theme style -->
   <link rel="stylesheet" href="{{asset('dist/css/AdminLTE.min.css')}}">
   <!-- AdminLTE Skins. We have chosen the skin-blue for this starter
@@ -97,15 +96,15 @@ desired effect
                     <a href="#">
                       <div class="pull-left">
                         <!-- User Image -->
-                        <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+                        <img src="dist/img/garage.jpeg" class="img-circle" alt="User Image">
                       </div>
                       <!-- Message title and timestamp -->
                       <h4>
-                        Support Team
+                     CITAS
                         <small><i class="fa fa-clock-o"></i> 5 mins</small>
                       </h4>
                       <!-- The message -->
-                      <p>Why not buy a new awesome theme?</p>
+                      <p>5 citas para hoy</p>
                     </a>
                   </li>
                   <!-- end message -->
@@ -131,7 +130,7 @@ desired effect
                 <ul class="menu">
                   <li><!-- start notification -->
                     <a href="#">
-                      <i class="fa fa-users text-aqua"></i> 5 new members joined today
+                      <i class="fa fa-users text-aqua"></i> tienes 4 notificationes
                     </a>
                   </li>
                   <!-- end notification -->
@@ -145,10 +144,10 @@ desired effect
             <!-- Menu Toggle Button -->
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
               <i class="fa fa-flag-o"></i>
-              <span class="label label-danger">9</span>
+              <span class="label label-danger">4</span>
             </a>
             <ul class="dropdown-menu">
-              <li class="header">You have 9 tasks</li>
+              <li class="header">CITAS COMPLETADAS</li>
               <li>
                 <!-- Inner menu: contains the tasks -->
                 <ul class="menu">

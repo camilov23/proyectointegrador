@@ -3,12 +3,12 @@
 <div class="row">
     <div class="col-md-8 col-xs-12">
     @include('producto.search')
-    <h3>Reporte Todos Los productos    <a href="\imprimirproductos"><button class="btn btn-success"><span class="glyphicon glyphicon-download-alt"></span>    Generar PDF</button></a></h3>
+    <h3>Reporte Todos Los productos    <a href="\imprimirproductos"><button class="btn btn-success"><span class="glyphicon glyphicon-download-alt"></span></button></a></h3>
     </div>
     
         <div class="col-md-2">
             <a href="producto/create" class="pull-right">
-                <button class="btn btn-success">Insertar Producto</button>
+                <button class="btn btn-success"><img src="dist/img/add2.png" ></button>
                 </a>
                 </div>
                     </div>
@@ -17,29 +17,32 @@
                             <div class="table-responsive">
                                 <table class="table table-striped table-hover">
                                     <thead>
-                                        <th>Id</th>  
+                                        <th>ID</th>  
+                                        <th>Garantia</th>
                                         <th>Nombre</th>
-                                        <th>Marca</th>
-                                        <th>Stock</th>
                                         <th>Precio</th>
+                                        <th>Stock</th>
+                                        <th>Marca</th>
                                         <th>Nacional</th>
                                         <th width="180">Opciones</th>
                                     </thead>
                                     <tbody>
                                     @foreach($productos as $producto)
                                     <tr>
-                                            <td>{{ $producto->id }}</td>
+                                        <td>{{ $producto->id_producto }}</td>
+                                            <td>{{ $producto->garantia_id_garantia }}</td>
                                             <td>{{ $producto->nombre }}</td>
-                                            <td>{{ $producto->marca }}</td>
+                                            <td>{{ $producto->precio_unitario}}</td>
                                             <td>{{ $producto->cantidad }}</td>
-                                            <td>{{ $producto->precio }}</td>
+                                            <td>{{ $producto->marca }}</td>
                                             <td>{{ $producto->nacional }}</td>
-                                            <td>
-                                            <a href="{{URL::action('ProductoController@edit',$producto->id)}}">
-                                            <button class="btn btn-primary">Actualizar</button></a>
 
-                                                    <a href=""data-target="#modal-delete-{{$producto->id}}" data-toggle="modal">
-                                                    <button class="btn btn-danger">Eliminar</button></a>
+                                            <td>
+                                            <a href="{{URL::action('ProductoController@edit',$producto->id_producto)}}">
+                                            <button class="btn btn-primary"><img src="dist/img/update2.png" ></button></a>
+
+                                                    <a href=""data-target="#modal-delete-{{$producto->id_producto}}" data-toggle="modal">
+                                                    <button class="btn btn-danger"><img src="dist/img/delete2.png" ></button></a>
                                             </td>
                                         </tr>
                                         @include('producto.modal')

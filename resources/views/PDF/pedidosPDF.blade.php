@@ -25,16 +25,16 @@
                 <th>IVA</th>
                 <th>TOTAL</th>
                 <th>METODO DE PAGO</th>
-            </tr>@foreach($pedidos as $ped)<tr>
-                <td>{{$ped->id}}</td>
-                <td>{{$ped->id_empleado}}</td>
-                <td>{{$ped->id_cliente}}</td>
-                <td>{{$ped->fecha}}</td>
+            </tr>@foreach($pedido_factura as $ped)<tr>
+                <td>{{$ped->id_pedido_fact}}</td>
+                <td>{{$ped->empleado_id_empleado}}</td>
+                <td>{{$ped->cliente_id_cliente}}</td>
+                <td>{{$ped->fecha_pedido}}</td>
                 <td>{{$ped->hora}}
                 <td>{{$ped->subtotal}}</td>
                 <td>{{$ped->iva}}</td>
-                <td>{{$ped->total}}</td>
-                <td>{{$ped->id_metodo_pago}}</td>
+                <td>{{$ped->valor_total}}</td>
+                <td>{{$ped->metodo_pago}}</td>
             </tr>@endforeach
         </table>
         <h5 class="text-center">Grupo 511 -Tecnología en Sistemas</h5>
