@@ -18,8 +18,7 @@ Route::resource('producto', 'ProductoController');
 Route::get('imprimirproductos','PdfController@imprimirproductos')->name('imprimirproductos');
 Route::get('imprimirpedidos','pedidoPdfController@imprimirpedidos')->name('imprimirpedidos');
 Route::get('imprimirdetalle','detallePdfController@imprimirdetalle')->name('imprimirdetalle');
-Route::get('imprimirpagos','facturaPdfController@imprimirpagos')->name('imprimirpagos');
-Route::get('buscar','facturaPdfController@buscar')->name('buscar');
+Route::get('imprimirpagos/{id_pedido_fact}','facturaPdfController@imprimirpagos')->name('imprimirpagos');
 Route::get('/', function () {
     return view('welcome');
 });

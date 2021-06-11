@@ -111,7 +111,14 @@ class pedidosController extends Controller
      */
     public function destroy($id_pedido_fact)
     {
+        
         $pedidos = pedidos::findOrFail($id_pedido_fact);
+  
+        $pedido_detalle = detalle_pedido::where('pedido_factura_id_pedido_fact', '=', $id_pedido_fact);
+
+
+//dd($pedido_detalle);
+        $pedido_detalle->delete();
         $pedidos->delete();
         return Redirect::to('pedido');
     }

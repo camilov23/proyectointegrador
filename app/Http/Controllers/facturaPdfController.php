@@ -9,7 +9,7 @@ use DB;
 
 class facturaPdfController extends Controller
 {
-    public function imprimirpagos(Request $request){
+    public function imprimirpagos($id_pedido_fact){
    
      $pedidos= DB::table('pedido_factura as pf')
      
@@ -17,9 +17,9 @@ class facturaPdfController extends Controller
      ->join('cliente as cl','pf.cliente_id_cliente','=', 'cl.id_cliente')
      ->join('empleado as em','pf.empleado_id_empleado', '=', 'em.id_empleado')
      ->join('producto as pr','pd.producto_id_producto', '=', 'pr.id_producto')
-     
+     ->where('id_pedido_fact', '=' , $id_pedido_fact)
      ->get();
-     //dd($pedido);
+     //dd($pedidos);
      $pdf = \PDF::loadView('Pdf.facturaPDF',['pedido' => $pedidos]);
      $pdf->setPaper('carta', 'A4');
      return $pdf->download('Factura Venta Megacar.pdf');

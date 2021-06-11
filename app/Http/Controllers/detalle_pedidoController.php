@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 use App\detalle_pedido;
+use App\pedidos;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
+
 use DB;
 class detalle_pedidoController extends Controller
 
@@ -96,7 +98,9 @@ class detalle_pedidoController extends Controller
     public function destroy($pedido_factura_id_pedido_fact)
     {
         $detalle_pedido = detalle_pedido::findOrFail($pedido_factura_id_pedido_fact);
+        $pedidos= pedidos::where('id_pedido_fact', '=', $pedido_factura_id_pedido_fact);
         $detalle_pedido->delete();
+        $pedidos->delete();
         return Redirect::to('detalle');
     }
 }

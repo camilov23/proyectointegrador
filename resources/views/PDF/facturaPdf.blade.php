@@ -66,10 +66,10 @@
 			</thead>
 			<tbody id="detalle_productos">
 				<tr>
-					<td class="textcenter">{{$ped->id_producto}}</td>
+					<td class="textcenter">{{$ped->cantidad}}</td>
 					<td>{{$ped->nombre}}</td>
-					<td class="textright">{{$ped->subtotal}}</td>
-					<td class="textright">{{$ped->subtotal}}</td>
+					<td class="textright">$ {{$ped->subtotal}}</td>
+					<td class="textright">$ {{$ped->valor_total}}</td>
 				</tr>
 			
 			</tbody>

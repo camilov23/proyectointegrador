@@ -20,14 +20,14 @@
 
 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
         <div class="form-group"><br>
-            <label for="id_empleado">Empleado</label>
-            <input type="number" name="id_empleado" id="id_empleado" class="form-control" placeholder="codigo"  value="{{$pedidos->empleado_id_empleado}}">
+            <label for="emppleado_id_empleado">Empleado</label>
+            <input type="number" name="empleado_id_empleado" id="empleado_id_empleado" class="form-control" placeholder="codigo"  value="{{$pedidos->empleado_id_empleado}}">
         </div>
 </div>
 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
         <div class="form-group"><br>
-            <label for="id_cliente">Cliente</label>
-            <input type="number" name="id_cliente" id="id_cliente" class="form-control" placeholder="codigo"  value="{{$pedidos->cliente_id_cliente}}">
+            <label for="cliente_id_cliente">Cliente</label>
+            <input type="number" name="cliente_id_cliente" id="cliente_id_cliente" class="form-control" placeholder="codigo"  value="{{$pedidos->cliente_id_cliente}}">
         </div>
 </div>
     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">

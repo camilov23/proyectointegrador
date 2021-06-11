@@ -77,8 +77,14 @@ class ProductoController extends Controller
      */
     public function edit($id_producto)
     {
-        $productos=producto::findOrFail($id_producto);
+       $productos=producto::findOrFail($id_producto);
+      /* $productos= DB::table('producto as pro')
+       ->where('id_producto','=', $id_producto)
+       ->get();
+       //dd($productos);*/
         return view("producto.edit",["producto"=>$productos]);
+
+    
     }
 
     /**
@@ -110,6 +116,8 @@ class ProductoController extends Controller
     public function destroy($id_producto)
     {
         $productos=producto::findOrFail($id_producto);
+        $pedido_detalle = detalle_pedido::where('producto_id_producto', '=', $id_producto);
+        $pedido_detalle->delete();
         $productos->delete();
         return Redirect::to('producto');
     }
